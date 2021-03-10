@@ -52,8 +52,6 @@ const quotes = [
 function getRandomQuote(array) {
   let randomNum = Math.floor(Math.random()*(array.length));
   let randomQuote = array[randomNum];
-  console.log(randomNum);
-  console.log(randomQuote);
   return randomQuote;
 }
 getRandomQuote(quotes);
@@ -78,7 +76,6 @@ function printQuote(array) {
 document.getElementById('quote-box').innerHTML = quoteString;
 return quoteString;
 }
-//console.log(screenQuote);
 
 
 /***
