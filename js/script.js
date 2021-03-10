@@ -36,13 +36,19 @@ const quotes = [
     source: 'Dolly Parton'
   }
 ];
-
+//console.log(quotes);
 
 /***
  * `getRandomQuote` function
 ***/
-
-
+function getRandomQuote(array) {
+  let randomNum = Math.floor(Math.random()*(array.length));
+  let randomQuote = array[randomNum];
+  console.log(randomNum);
+  console.log(randomQuote);
+  return randomQuote;
+}
+getRandomQuote(quotes);
 
 /***
  * `printQuote` function
