@@ -1,20 +1,25 @@
 /******************************************
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
+Tamika Hayes - March 9, 2021
 ******************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
+/* 
+The Random Quote Generator project displays a random, inspirtational quote each time
+a button is clicked. Each quote has a source (speaker attribution). 
+Where relevant, a citation and year is displayed as well.
+*/
 
 /*** 
- * `quotes` array 
+ * The `quotes` array is an array of objects. 
+ * All objects include the properties 'quote' and 'source.'
+ * Some objects may also include properties for 'citation' and/or 'year.'
 ***/
 const quotes = [
   {
     quote: 'We choose to go to the Moon in this decade and do the other things, not because they are easy, but because they are hard.',
     source: 'John F. Kennedy',
-    citation: 'Address at Rice University on the Nation Space Effort',
+    citation: 'Address at Rice University on the Nation\'s Space Effort',
     year: 1962
   },
   {
@@ -36,10 +41,13 @@ const quotes = [
     source: 'Dolly Parton'
   }
 ];
-//console.log(quotes);
+
 
 /***
- * `getRandomQuote` function
+ * The`getRandomQuote` function generates a random number and stores it in a variable.
+ * The function then uses that random number as an array index value, which is in turn
+ * used to generate a random quote object, stored in the variable 'randomQuote' 
+ * and returned after the function is called.
 ***/
 function getRandomQuote(array) {
   let randomNum = Math.floor(Math.random()*(array.length));
@@ -51,7 +59,10 @@ function getRandomQuote(array) {
 getRandomQuote(quotes);
 
 /***
- * `printQuote` function
+ * The `printQuote` function calls the getRandomquote function, stores the returned
+ * quote object in a variable called 'screenQuote', and uses that quote object to
+ * build a string of HTML and quote properties, stored in the variable 'quoteString.'
+ * The string 'quoteString' is then used to display a random quote in the browser.
 ***/
 function printQuote(array) {
   let screenQuote = getRandomQuote(quotes);
