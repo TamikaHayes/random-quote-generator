@@ -53,7 +53,21 @@ getRandomQuote(quotes);
 /***
  * `printQuote` function
 ***/
-
+function printQuote(array) {
+  let screenQuote = getRandomQuote(quotes);
+  let quoteString = `<p class="quote">${screenQuote.quote}</p>` +
+            `<p class="source">${screenQuote.source}` 
+    if (screenQuote.citation) {
+      quoteString += `<span class="citation">${screenQuote.citation}</span>`
+    }
+    if (screenQuote.year) {
+      quoteString += `<span class="year">${screenQuote.year}</span>`
+    } 
+    + '</p>';
+document.getElementById('quote-box').innerHTML = quoteString;
+return quoteString;
+}
+//console.log(screenQuote);
 
 
 /***
